@@ -88,7 +88,6 @@ export default {
                     label="Details"
                     inputIdentifier="details"
                     inputType="text"
-                    class="w-full sm:w-auto"
                   />
 
                   <div class="mt-7 pb-4 sm:pb-1">
