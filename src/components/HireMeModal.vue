@@ -2,10 +2,9 @@
 import feather from "feather-icons";
 import Button from "./reusable/Button.vue";
 import FormInput from "./reusable/FormInput.vue";
-import FormTextarea from "./reusable/FormTextarea.vue";
 export default {
   props: ["showModal", "modal", "categories"],
-  components: { Button, FormInput, FormTextarea },
+  components: { Button, FormInput },
   data() {
     return {};
   },
@@ -85,27 +84,33 @@ export default {
                     </select>
                   </div>
 
-                  <FormTextarea label="Details" textareaIdentifier="details" />
+                  <FormInput
+                    label="Details"
+                    inputIdentifier="details"
+                    inputType="text"
+                    class="w-full sm:w-auto"
+                  />
 
                   <div class="mt-7 pb-4 sm:pb-1">
                     <Button
                       title="Send Request"
-                      class="px-4 sm:px-6 py-2 sm:py-2.5 text-white bg-indigo-500 hover:bg-indigo-600 rounded-md focus:ring-1 focus:ring-indigo-900 duration-500"
+                      class="px-4 sm:px-6 py-2 sm:py-2.5 text-white bg-indigo-500 hover:bg-indigo-600 rounded-md focus:ring-1 focus:ring-indigo-900 duration-500 w-full sm:w-auto"
                       type="submit"
                       aria-label="Submit Request"
                     />
                   </div>
                 </form>
               </div>
+
               <div
                 class="modal-footer mt-2 sm:mt-0 py-5 px-8 border0-t text-right"
               >
-                <Button
+                <!-- <Button
                   title="Close"
                   class="px-4 sm:px-6 py-2 bg-gray-600 text-primary-light hover:bg-ternary-dark dark:bg-gray-200 dark:text-secondary-dark dark:hover:bg-primary-light rounded-md focus:ring-1 focus:ring-indigo-900 duration-500"
                   @click="showModal()"
                   aria-label="Close Modal"
-                />
+                /> -->
               </div>
             </div>
           </div>
